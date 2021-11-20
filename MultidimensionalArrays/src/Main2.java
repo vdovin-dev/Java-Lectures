@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+//Задача 1-2
+
 public class Main2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -12,7 +14,6 @@ public class Main2 {
         System.out.print("Введи K: ");
         int k = in.nextInt();
 
-
         int [] [] mass = new int[m][n];
 
         for (int i = 0; i < m; ++i) {
@@ -22,10 +23,10 @@ public class Main2 {
             }
         }
         int sum = 0;
-        int sum2 = 0;
-        for (int i = 0; i < n; ++i){
-            sum = sum + mass[k -1] [i];
-            //sum2 = sum2 * mass[k -1] [i];
+        int sum2 = 1;
+        for (int i = 0; i < m; ++i){
+            sum = sum + mass[k] [i];
+            sum2 = sum2 * mass[k] [i];
         }
         System.out.print("Сумма: " + sum);
         System.out.print("Произв: " + sum2);
